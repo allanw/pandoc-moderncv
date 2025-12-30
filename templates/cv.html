@@ -37,9 +37,6 @@
       </h1>
       <h2 class="title">$title$</h2>
     </div>
-    $if(photo)$
-    <img src="$photo$" />
-    $endif$
     <ul class="details">
       <!-- phone -->
       $if(phone)$
@@ -88,7 +85,7 @@
       <!--if(address)-->
       <li itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
         $if(address.city)$
-        <span itemprop="addressLocality">$address.city$</span>
+        <span itemprop="addressLocality">$address.city$,</span>
         $endif$
         $if(address.country)$
         <span itemprop="addressCountry">$address.country$</span>

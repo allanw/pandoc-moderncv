@@ -1,5 +1,5 @@
 @import "compass/reset";
-@import "compass/typography/vertical_rhythm";
+//@import "compass/typography/vertical_rhythm";
 //@import "vendors/fontawesome/font-awesome";
 
 @import "susy";
@@ -8,7 +8,7 @@
 @import "layouts";
 @import "fonts";
 
-@include establish-baseline;
+//@include establish-baseline;
 
 body {
     @include container;
@@ -21,9 +21,9 @@ body {
 body { font-family: "Palatino", sans-serif; }
 strong { font-weight: bold; }
 em { font-style: italic; }
-h1 { @include adjust-font-size-to($h1-font-size, $h1-line-multiple); }
-h2 { @include adjust-font-size-to($h2-font-size, $h2-line-multiple); }
-h3 { @include adjust-font-size-to($h3-font-size, $h3-line-multiple); }
+//h1 { @include adjust-font-size-to($h1-font-size, $h1-line-multiple); }
+//h2 { @include adjust-font-size-to($h2-font-size, $h2-line-multiple); }
+//h3 { @include adjust-font-size-to($h3-font-size, $h3-line-multiple); }
 
 p, dt { 
     -ms-word-break: break-all;
@@ -80,7 +80,7 @@ header {
     @media screen and (max-width: $sm-layout-max) {
         #title {
             @include span(last $total-columns of $total-columns);
-            @include trailer(1); 
+            //@include trailer(1); 
         }
 
         .details {
@@ -88,7 +88,7 @@ header {
         }
 
         img {
-            @include trailer(1); 
+            //@include trailer(1); 
             @include span(last $total-columns of $total-columns);
         }
     }
@@ -97,8 +97,8 @@ header {
     @media screen and (min-width: $sm-layout-min) and (max-width: $sm-layout-max) {
         img {
             @include pad(3,3);
-            @include leader(1);
-            @include trailer(1); 
+            //@include leader(1);
+            //@include trailer(1); 
             @include span($total-columns/2 of $total-columns);
         }
     }
@@ -111,7 +111,7 @@ header {
                 @include span($total-columns*2/3 of $total-columns);
                 text-align: right;
 
-                h2 { @include trailer(0.5); }
+                //h2 { @include trailer(0.5); }
             }
 
             .details {
@@ -165,7 +165,7 @@ section {
     // paragraph
 
     > p { 
-        @include leader(1);
+        //@include leader(1);
         @include span(last $total-columns of $total-columns);
         text-align: justify; 
     }
@@ -173,7 +173,7 @@ section {
     // headers
 
     > h2 {
-        @include leader(1, $h2-font-size);
+        //@include leader(1, $h2-font-size);
         @include span(last $total-columns of $total-columns);
         color: $section-title-color;
 
@@ -182,15 +182,15 @@ section {
             display: inline-block;
             margin-right: gutter();
             width: space(2) - gutter();
-            height: rhythm($h2-line-multiple/3, $h2-font-size);
-            margin-bottom: rhythm($h2-line-multiple/6, $h2-font-size);
+            //height: rhythm($h2-line-multiple/3, $h2-font-size);
+            //margin-bottom: rhythm($h2-line-multiple/6, $h2-font-size);
             background-color: $section-rectangle-color;
         }
     }
 
     > h3 {
         @include push(2);
-        @include leader(1, $h3-font-size);
+        //@include leader(1, $h3-font-size);
         @include span(10 of $total-columns);
     }
 
@@ -206,7 +206,7 @@ section {
 
     #{nest('&:not(.listing) > dl', '> dt, > dd')},
     #{nest('&.listing > dl', '> dt:first-of-type, > dd:first-of-type')} {
-        @include leader(1); 
+        //@include leader(1); 
     }
 
     dt {
@@ -230,9 +230,9 @@ section {
             display: none;
         }
 
-        @include leader(1);
+        //@include leader(1);
         @include span(last $total-columns of $total-columns);
-        @include trailer(1);
+        //@include trailer(1);
 
         &, p {
             text-align: center;
@@ -245,12 +245,12 @@ section {
 footer {
     // header span all grid
     @include span(last $total-columns of $total-columns);
-    @include rhythm(1, 1);
+    //@include rhythm(1, 1);
 
     text-align: center;
 
     li { display: inline; &:before{ content: '\25CF'; padding: 10px; color: $section-rectangle-color; } }
-    p { @include leader(1); }
+    //p { @include leader(1); }
 }
 
 //
